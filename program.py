@@ -9,8 +9,11 @@ try:
 	lexer = Lexer(code)
 	tokens = lexer.tokenize()
 	print(tokens)
+	
 	parser = Parser(tokens)
 	ast = parser.parse()
+	# print(ast)
+	
 	interpreter = Interpreter(ast)
 	interpreter.interpret()
 except Exception as e:
